@@ -1,4 +1,8 @@
-### CODE FROM STUDENT GUIDE
+"""
+============================================================================
+CODE FROM STUDENT GUIDE
+============================================================================
+"""
 # import requests
 # import json
 #
@@ -22,7 +26,12 @@
 #
 #
 
-### SIMPLYFIYING THE CODE ABOVE
+"""
+============================================================================
+SIMPLYFIYING THE CODE ABOVE
+============================================================================
+"""
+
 import recipe
 import requests
 
@@ -31,13 +40,6 @@ url = 'https://api.edamam.com/api/recipes/v2?type=public&beta=true&q={}&app_id=5
 
 result = requests.get(url)
 data = result.json()
+retun data['hits']
 
-print(data['hits']['recipe'])        #only works when i add an integer in between. Why is that?. Erro List indices must be integers or slices, not str. my objective is to return the sub-value of 'hits'
-
-### I ALSO TRIED ANOTHER VERSION
-# TOC = recipe_search
-# for result in TOC:
-#     recipe = result['recipe']
-#
-# print(recipe['label'][0])
-# print(recipe['uri'][0])
+print(data['hits']['recipe'])        #only works when i add an integer in between. Why is that?. Error List indices must be integers or slices, not str. my objective is to return the sub-value of 'hits'
