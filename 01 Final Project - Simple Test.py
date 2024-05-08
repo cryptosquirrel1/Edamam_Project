@@ -1,5 +1,4 @@
 import requests
-import _json
 
 # IDs
 APP_ID = '5ec8b15f'
