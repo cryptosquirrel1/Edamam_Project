@@ -1,19 +1,42 @@
 import requests
-def recipe_search(ingredient):
-# Register to get an APP ID and key https://developer.edamam.com/
-app_id = ''
-app_key = ''
-result = requests.get(
-'https://api.edamam.com/search?q={}&app_id={}&app_key={}'.format(ingredient, app_id,
-app_key)
-)
+
+# IDs
+APP_ID = '5ec8b15f'
+API_KEY = 'f872fab13b04a660a923e43c2e9f5654'
+key_word = input("find new recipe ")
+url = f'https://api.edamam.com/api/recipes/v2?type=public&beta=true&q={key_word}&app_id={APP_ID}&app_key={API_KEY}'
+result = requests.get(url)
 data = result.json()
-return data['hits']
-def run():
-ingredient = input('Enter an ingredient: ')
-results = recipe_search(ingredient)
-for result in results:
-recipe = result['recipe']
-print(recipe['label'])
-print(recipe['uri'])
-print()
+data = data['hits']
+
+def get_recipe()
+    n = 0
+    dict = {}
+    valid = 0
+    while valid == 0:
+        recipe_choice = input
+
+    for a in range(len(data)):
+        label = recipe['label'][a]
+        ingredientlines = recipe['ingredientLines'][a]
+
+        n += 1
+
+        # Adding the results to the dictionary
+        dict[n] = {'name': label,
+                   'ingredients': ingredientlines,
+                   }
+        
+
+for index, results in enumerate(data):
+    recipe = results['recipe']
+    print(index, recipe['label'], '-', recipe['uri'])
+
+print('========================================')
+print(f"   Select Recipe # (1-{index})\n")
+
+    # choice = int(recipe_choice)
+    # if choice <= n and choice > 0:
+    #     valid = 1
+    # else: print("404. Try again")
+
