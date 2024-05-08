@@ -1,0 +1,10 @@
+def select_recipe(data, max_index, select):
+    print(f"   Select Recipe # (1-{index})\n")
+    select = input('\t>>')
+    if len(select) > 0:
+        print('true')
+    else:
+        print(f'try again')
+        input("")
+
+select_recipe()            ### what should be the ending for call functions?
