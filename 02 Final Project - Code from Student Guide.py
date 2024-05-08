@@ -7,7 +7,10 @@ CODE FROM STUDENT GUIDE
 # import json
 #
 # def recipe_search(ingredient):
-#     result = requests.get('https://api.edamam.com/api/recipes/v2?type=public&beta=true&q={}&app_id=5ec8b15f&app_key=f872fab13b04a660a923e43c2e9f5654').format(recipe_search)          ### UPDATED THE API URL WITH <APP_ID> AND <APP_KEY> INS
+# Register to get APP ID and KEY https://developer.edamam.com/
+#     app_id = '5ec8b15f'
+#     app_key = 'f872fab13b04a660a923e43c2e9f5654'
+#     result = requests.get('https://api.edamam.com/api/recipes/v2?type=public&beta=true&q={recipe_search}&app_id={app_id}&app_key={app_key}).format(ingredients,app_id,app_key)
 #     data = result.json()
 #     return data['hits']                        ### RETURN DATA SEEMS TO BE AN ERROR
 #
@@ -22,7 +25,7 @@ CODE FROM STUDENT GUIDE
 #     print(recipe['uri'])
 #     print()
 #
-# run()
+# run()                                        ### WHY DID WE END WITH RUN?
 #
 #
 
